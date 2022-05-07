@@ -1,4 +1,30 @@
-ext._shutdown = function() {};ext._getStatus = function() { 
-return {status: 2, msg: 'Ready'};}; 
-var descriptor = { blocks: [ ["h","( Hat)","Loop"],],menus: {},
-url: 'https://kyleplo.github.io/scratch-extension-creator/help#'Hello!};ScratchExtensions.register('RoomBox M8', descriptor, ext);
+class RoomBoxM8 {
+    getInfo() {
+        return {
+            "id": "RoomBoxM8",
+            "name": "RoomBoxM8",
+            "blocks": [{
+                    "opcode": "substringy",
+                    "blockType": "reporter",
+                    "text": "letters [num1] through [num2] of [string]",
+                    "arguments": {
+                        "num1": {
+                            "type": "number",
+                            "defaultValue": "2"
+                        },
+                        "num2": {
+                            "type": "number",
+                            "defaultValue": "5"
+                        },
+                        "string": {
+                            "type": "string",
+                            "defaultValue": "hello world"
+                        }
+                    }
+                },
+            }],
+        "menus": { //we will get back to this in a later tutorial
+        }
+    };
+}
+Scratch.extensions.register(new RoomBoxM8());
