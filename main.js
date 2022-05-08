@@ -11,7 +11,7 @@ class RoomBox {
       id: 'roombox',
       name: 'RoomBox', // The name of the extension
       blockIconURI: blockIconURI,
-      showStatusButton: true,
+      showStatusButton: false,
       blocks: [ // 各ブロックの定義
         {
           opcode: 'hello', // このブロックが実行されると、helloという関数が呼ばれる
