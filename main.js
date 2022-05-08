@@ -14,13 +14,16 @@ class RoomBox {
       showStatusButton: false,
       blocks: [ // 各ブロックの定義
         {
-          opcode: 'consolelog', // このブロックが実行されると、helloという関数が呼ばれる
-          blockType: Scratch.BlockType.COMMAND,　// tell scratch to know that ts a block
+          opcode: 'test', // このブロックが実行されると、helloという関数が呼ばれる
+          blockType: Scratch.BlockType.REPORTER,　// tell scratch to know that ts a block, reporter, or a bolean
           text: 'console.log [TEXT]' // ブロックに表示されるテキスト
-          TEXT: {
-            type: ArgumentType.STRING,
-            defaultValue: 'text'
-          }
+          branchCount: 0,
+          arguments: {
+               TEXT: {
+                type: ArgumentType.STRING,
+                defaultValue: 'text'
+              }
+          
         }
       ]
     }
