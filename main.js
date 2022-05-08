@@ -30,7 +30,7 @@ class RoomBox {
   }
 
   hello() {
-    console.log('[TEXT]'); // console log に hello と出力
+    console.log('test'); // console log に hello と出力
   }
 }
 
