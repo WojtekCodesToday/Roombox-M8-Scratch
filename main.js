@@ -9,7 +9,7 @@ class RoomBoxM8 {
                     "text": "Hello world!",
                     },
                     "blocks": [{
-                    "opcode": "substringy",
+                    "opcode": "substringy1",
                     "blockType": Scratch.BlockType.COMMAND,
                     "text": "Hello world Two!",
                     }
