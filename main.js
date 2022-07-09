@@ -3,18 +3,19 @@ class RoomBoxM8 {
         return {
             "id": "RoomBoxM8",
             "name": "RoomBoxM8",
-            "blocks": [{
-                    "opcode": "substringy",
-                    "blockType": Scratch.BlockType.COMMAND,
-                    "text": "Hello world!",
-                    },
-                    "blocks": [{
-                    "opcode": "substringy1",
-                    "blockType": Scratch.BlockType.COMMAND,
-                    "text": "Hello world Two!",
-                    }
-                },
-            }],
+             "blocks": [
+        {
+          opcode: 'hello',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Hello'
+        }
+      ]
     };
 }
+      hello() {
+    // You can just return a value: any string, boolean, or number will work.
+    // If you have to perform an asynchronous action like a request, just return a Promise.
+    // The block will wait until the Promise resolves and return the resolved value.
+    return 'Hello, world!';
+  }
 Scratch.extensions.register(new RoomBoxM8());
