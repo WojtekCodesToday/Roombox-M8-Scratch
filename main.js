@@ -14,23 +14,31 @@ class RoomBox {
       showStatusButton: false,
       blocks: [ // 各ブロックの定義
         {
-          opcode: 'test', // このブロックが実行されると、helloという関数が呼ばれる
-          blockType: Scratch.BlockType.REPORTER,　// tell scratch to know that ts a block, reporter, or a bolean
-          text: 'console.log [TEXT]' // ブロックに表示されるテキスト
+          opcode: 'hello',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'alert [TEXT]'
           branchCount: 0,
           arguments: {
                TEXT: {
                 type: ArgumentType.STRING,
                 defaultValue: 'text'
-              }
-          
+        },
+          opcode: 'test',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Test'
         }
       ]
     }
   }
 
   hello() {
-    console.log('test'); // console log に hello と出力
+    alert(TEXT); // console log に hello と出力
+  }
+test() {
+    // You can just return a value: any string, boolean, or number will work.
+    // If you have to perform an asynchronous action like a request, just return a Promise.
+    // The block will wait until the Promise resolves and return the resolved value.
+    return 'Hello, world!';
   }
 }
 
